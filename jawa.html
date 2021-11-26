@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  body{
+height: 2000px;
+
+  }
+.img-head{
+
+height: 800px;
+width: 1000px;
+
+}
+.upper{
+margin-top: -500px;
+margin-left: 370px;
+}
+.subscribe-section{
+margin-top: 420px;
+margin-left: 320px;
+height: 200px;
+}
+.model-btn{
+color: blue;
+margin-left: 80px;
+
+}
+.subscribe-section h2{
+margin: 40px 0 20px 0;
+
+}
+.subscribe-section p{
+margin: 20px;
+
+}
+.model-bg{
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0.3);
+display: flex;
+justify-content: center;
+align-items: center;
+visibility: hidden;
+opacity: 0;
+transition: visibility 0s, opacity 0.5s;
+}
+.bg-active{
+visibility: visible;
+opacity: 1;
+}
+.model{
+  position: relative;
+  background-color: white;
+  margin-top: 200px;
+  width: 30%;
+height: 30%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-family: 'Montserrat',sans-serif;
+
+}
+.model button{
+  padding: 10px 20px;
+  background-color: lightcoral;
+  color: aliceblue;
+border: none;
+}
+.model-close{
+position: absolute;
+top: 10px;
+right: 10px;
+font-weight: bold;
+cursor: pointer;
+
+}
+</style>
+<body>
+  <img class="img-head" src="12.jpg" alt="">
+<header>
+<div class="upper">
+  <h2>The Model</h2>
+<p>Scrool down to see the model</p>
+</div> 
+
+</header>
+  <div class="subscribe-section">
+<h2>This is model</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Esse, eligendi in reiciendis corporis tempora corrupti eum? 
+  Eum asperiores, corporis earum magni maiores ab,
+   laudantium voluptatibus molestiae explicabo laboriosam quas minima?</p>
+  <button class="model-btn">Model</button>
+  </div>
+<div class="model-bg">
+<div class="model">
+<h2>Subscribe to our thang</h2>
+<label for="name">Name</label> 
+<input type="text" name="name">
+<label for="email">Email</label>
+<input type="email" name="email">
+<button>Subscribe</button>
+<span class="model-close">x</span>
+</div>
+</div>
+<script>
+var modelBtn =document.querySelector('.model-btn');
+var modelBg =document.querySelector('.model-bg');
+var modelClose =document.querySelector('.model-close');
+modelBtn.addEventListener('click',function(){
+modelBg.classList.add('bg-active');
+
+});
+modelClose.addEventListener('click',function(){
+modelBg.classList.remove('bg-active');
+
+})
+</script>
+</body>
+</html>
